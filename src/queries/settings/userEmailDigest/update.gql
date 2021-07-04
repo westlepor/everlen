@@ -1,0 +1,22 @@
+mutation UpdateUserEmailDigestMutation(
+  $digest: Boolean!
+  $email: String!
+  $partnerId: Int
+  $clientIds: [Int]
+  $id: ID!
+) {
+  partialUpdateUser(
+    data: {
+      send_email_digest: $digest
+      email: $email
+      enterprise_client_ids: $clientIds
+      enterprise_partner_id: $partnerId
+    }
+    id: $id
+  ) {
+    send_email_digest
+    email
+    enterprise_client_ids
+    enterprise_partner_id
+  }
+}

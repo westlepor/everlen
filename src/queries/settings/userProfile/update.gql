@@ -1,0 +1,13 @@
+mutation UpdateUserProfileMutation(
+  $fullName: String
+  $phone: String
+  $id: ID!
+) {
+  partialUpdateUser(
+    data: { full_name: $fullName, mobile_phone_number: $phone }
+    id: $id
+  ) {
+    full_name
+    mobile_phone_number
+  }
+}

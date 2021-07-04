@@ -1,0 +1,8 @@
+query KitResultPDF($id: Int!) {
+  kit_results(where: { id: { _eq: $id } }) {
+    raw_results
+    barcode {
+      serial_number
+    }
+  }
+}

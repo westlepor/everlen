@@ -1,0 +1,5 @@
+query UserEmailDigest($id: ID!) {
+  findUserByID(id: $id) {
+    send_email_digest
+  }
+}

@@ -1,0 +1,688 @@
+{
+  "version": 2,
+  "tables": [
+    {
+      "table": {
+        "schema": "public",
+        "name": "barcode_groups"
+      },
+      "object_relationships": [
+        {
+          "name": "enterprise_partner",
+          "using": {
+            "foreign_key_constraint_on": "enterprise_partner_id"
+          }
+        }
+      ],
+      "array_relationships": [
+        {
+          "name": "barcodes",
+          "using": {
+            "manual_configuration": {
+              "remote_table": {
+                "schema": "public",
+                "name": "barcodes"
+              },
+              "column_mapping": {
+                "id": "barcode_group_id"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "public",
+        "name": "barcode_state_transitions"
+      },
+      "object_relationships": [
+        {
+          "name": "barcode",
+          "using": {
+            "foreign_key_constraint_on": "barcode_id"
+          }
+        }
+      ],
+      "select_permissions": [
+        {
+          "role": "clinical_admin",
+          "permission": {
+            "columns": [
+              "id",
+              "barcode_id",
+              "namespace",
+              "event",
+              "from",
+              "to",
+              "created_at"
+            ],
+            "filter": {
+              "_or": [
+                {
+                  "barcode": {
+                    "enterprise_consumer": {
+                      "spree_address": {
+                        "firstname": {
+                          "_eq": "X-Hasura-Site-Name"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "barcode": {
+                    "kit_result": {
+                      "spree_user": {
+                        "spree_address": {
+                          "firstname": {
+                            "_eq": "X-Hasura-Site-Name"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "allow_aggregations": true
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "public",
+        "name": "barcodes"
+      },
+      "object_relationships": [
+        {
+          "name": "barcode_group",
+          "using": {
+            "manual_configuration": {
+              "remote_table": {
+                "schema": "public",
+                "name": "barcode_groups"
+              },
+              "column_mapping": {
+                "barcode_group_id": "id"
+              }
+            }
+          }
+        },
+        {
+          "name": "enterprise_consumer",
+          "using": {
+            "foreign_key_constraint_on": "enterprise_consumer_id"
+          }
+        },
+        {
+          "name": "kit_result",
+          "using": {
+            "manual_configuration": {
+              "remote_table": {
+                "schema": "public",
+                "name": "kit_results"
+              },
+              "column_mapping": {
+                "id": "barcode_id"
+              }
+            }
+          }
+        }
+      ],
+      "array_relationships": [
+        {
+          "name": "barcode_state_transitions",
+          "using": {
+            "foreign_key_constraint_on": {
+              "column": "barcode_id",
+              "table": {
+                "schema": "public",
+                "name": "barcode_state_transitions"
+              }
+            }
+          }
+        },
+        {
+          "name": "issues",
+          "using": {
+            "manual_configuration": {
+              "remote_table": {
+                "schema": "public",
+                "name": "issues"
+              },
+              "column_mapping": {
+                "id": "issuable_id"
+              }
+            }
+          }
+        }
+      ],
+      "select_permissions": [
+        {
+          "role": "clinical_admin",
+          "permission": {
+            "columns": [
+              "id",
+              "serial_number",
+              "created_at",
+              "updated_at",
+              "spree_variant_id",
+              "barcode_group_id",
+              "state",
+              "ppu",
+              "spree_order_id",
+              "enterprise_consumer_id",
+              "spree_inventory_unit_id",
+              "fulfillment_provider_id",
+              "cancel_reason",
+              "replacement_order_id",
+              "original_inventory_unit_id",
+              "refunded",
+              "share_aggregate_data",
+              "share_individual_test_data"
+            ],
+            "filter": {
+              "_or": [
+                {
+                  "enterprise_consumer": {
+                    "spree_address": {
+                      "firstname": {
+                        "_eq": "X-Hasura-Site-Name"
+                      }
+                    }
+                  }
+                },
+                {
+                  "kit_result": {
+                    "spree_user": {
+                      "spree_address": {
+                        "firstname": {
+                          "_eq": "X-Hasura-Site-Name"
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "public",
+        "name": "consumers"
+      }
+    },
+    {
+      "table": {
+        "schema": "public",
+        "name": "enterprise_consumers"
+      },
+      "object_relationships": [
+        {
+          "name": "enterprise_partner",
+          "using": {
+            "manual_configuration": {
+              "remote_table": {
+                "schema": "public",
+                "name": "enterprise_partners"
+              },
+              "column_mapping": {
+                "enterprise_partner_id": "id"
+              }
+            }
+          }
+        },
+        {
+          "name": "spree_address",
+          "using": {
+            "foreign_key_constraint_on": "spree_address_id"
+          }
+        }
+      ],
+      "array_relationships": [
+        {
+          "name": "barcodes",
+          "using": {
+            "foreign_key_constraint_on": {
+              "column": "enterprise_consumer_id",
+              "table": {
+                "schema": "public",
+                "name": "barcodes"
+              }
+            }
+          }
+        }
+      ],
+      "select_permissions": [
+        {
+          "role": "clinical_admin",
+          "permission": {
+            "columns": [
+              "id",
+              "enterprise_partner_id",
+              "first_name",
+              "last_name",
+              "state",
+              "dob",
+              "gender",
+              "phone_number",
+              "created_at",
+              "updated_at",
+              "spree_address_id",
+              "race",
+              "ethnicity",
+              "pregnancy_status"
+            ],
+            "filter": {
+              "spree_address": {
+                "firstname": {
+                  "_eq": "X-Hasura-Site-Name"
+                }
+              }
+            },
+            "allow_aggregations": true
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "public",
+        "name": "enterprise_partners"
+      },
+      "array_relationships": [
+        {
+          "name": "enterprise_consumers",
+          "using": {
+            "manual_configuration": {
+              "remote_table": {
+                "schema": "public",
+                "name": "enterprise_consumers"
+              },
+              "column_mapping": {
+                "id": "enterprise_partner_id"
+              }
+            }
+          }
+        }
+      ],
+      "select_permissions": [
+        {
+          "role": "clinical_admin",
+          "permission": {
+            "columns": [
+              "display_name",
+              "id"
+            ],
+            "filter": {
+              "id": {
+                "_eq": "X-Hasura-Partner-Id"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "public",
+        "name": "issue_groups"
+      },
+      "select_permissions": [
+        {
+          "role": "clinical_admin",
+          "permission": {
+            "columns": [
+              "id",
+              "name",
+              "resolver",
+              "active",
+              "created_at",
+              "updated_at",
+              "require_lab_confirmation",
+              "default_lab_action"
+            ],
+            "filter": {}
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "public",
+        "name": "issues"
+      },
+      "object_relationships": [
+        {
+          "name": "barcode",
+          "using": {
+            "manual_configuration": {
+              "remote_table": {
+                "schema": "public",
+                "name": "barcodes"
+              },
+              "column_mapping": {
+                "issuable_id": "id"
+              }
+            }
+          }
+        },
+        {
+          "name": "issue_group",
+          "using": {
+            "manual_configuration": {
+              "remote_table": {
+                "schema": "public",
+                "name": "issue_groups"
+              },
+              "column_mapping": {
+                "issue_group_id": "id"
+              }
+            }
+          }
+        }
+      ],
+      "select_permissions": [
+        {
+          "role": "clinical_admin",
+          "permission": {
+            "columns": [
+              "id",
+              "resolved",
+              "data",
+              "issue_group_id",
+              "issuable_id",
+              "issuable_type",
+              "created_at",
+              "updated_at",
+              "state",
+              "lab_action",
+              "lab_action_complete",
+              "resolved_at"
+            ],
+            "filter": {
+              "barcode": {
+                "enterprise_consumer": {
+                  "spree_address": {
+                    "firstname": {
+                      "_eq": "X-Hasura-Site-Name"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "public",
+        "name": "kit_results"
+      },
+      "object_relationships": [
+        {
+          "name": "barcode",
+          "using": {
+            "manual_configuration": {
+              "remote_table": {
+                "schema": "public",
+                "name": "barcodes"
+              },
+              "column_mapping": {
+                "barcode_id": "id"
+              }
+            }
+          }
+        },
+        {
+          "name": "spree_user",
+          "using": {
+            "manual_configuration": {
+              "remote_table": {
+                "schema": "public",
+                "name": "spree_users"
+              },
+              "column_mapping": {
+                "spree_user_id": "id"
+              }
+            }
+          }
+        },
+        {
+          "name": "test",
+          "using": {
+            "manual_configuration": {
+              "remote_table": {
+                "schema": "public",
+                "name": "tests"
+              },
+              "column_mapping": {
+                "test_id": "id"
+              }
+            }
+          }
+        }
+      ],
+      "select_permissions": [
+        {
+          "role": "clinical_admin",
+          "permission": {
+            "columns": [
+              "id",
+              "created_at",
+              "updated_at",
+              "kit_values",
+              "kit_reference_ranges",
+              "pwn_order_number",
+              "raw_results",
+              "physician_approval",
+              "status",
+              "publish_hash",
+              "published_at",
+              "number",
+              "registration_code",
+              "collected_at",
+              "reported_at",
+              "results_approved_by",
+              "results_approved_at",
+              "test_id",
+              "barcode_id",
+              "spree_user_id",
+              "viewed_at"
+            ],
+            "filter": {
+              "barcode": {
+                "enterprise_consumer": {
+                  "enterprise_partner_id": {
+                    "_eq": "X-Hasura-Partner-Id"
+                  }
+                }
+              }
+            },
+            "allow_aggregations": true
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "public",
+        "name": "labs"
+      }
+    },
+    {
+      "table": {
+        "schema": "public",
+        "name": "spree_addresses"
+      },
+      "array_relationships": [
+        {
+          "name": "enterprise_consumers",
+          "using": {
+            "foreign_key_constraint_on": {
+              "column": "spree_address_id",
+              "table": {
+                "schema": "public",
+                "name": "enterprise_consumers"
+              }
+            }
+          }
+        }
+      ],
+      "select_permissions": [
+        {
+          "role": "clinical_admin",
+          "permission": {
+            "columns": [
+              "id",
+              "firstname",
+              "lastname",
+              "address1",
+              "address2",
+              "city",
+              "zipcode",
+              "phone",
+              "state_name",
+              "alternative_phone",
+              "company",
+              "state_id",
+              "country_id",
+              "created_at",
+              "updated_at",
+              "confirmed_at",
+              "enterprise_partner_id"
+            ],
+            "filter": {
+              "_or": [
+                {
+                  "enterprise_partner_id": {
+                    "_eq": "X-Hasura-Partner-Id"
+                  }
+                },
+                {
+                  "enterprise_consumers": {
+                    "enterprise_partner_id": {
+                      "_eq": "X-Hasura-Partner-Id"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "public",
+        "name": "spree_users"
+      },
+      "object_relationships": [
+        {
+          "name": "spree_address",
+          "using": {
+            "manual_configuration": {
+              "remote_table": {
+                "schema": "public",
+                "name": "spree_addresses"
+              },
+              "column_mapping": {
+                "ship_address_id": "id"
+              }
+            }
+          }
+        }
+      ],
+      "array_relationships": [
+        {
+          "name": "kit_results",
+          "using": {
+            "manual_configuration": {
+              "remote_table": {
+                "schema": "public",
+                "name": "kit_results"
+              },
+              "column_mapping": {
+                "id": "spree_user_id"
+              }
+            }
+          }
+        }
+      ],
+      "select_permissions": [
+        {
+          "role": "clinical_admin",
+          "permission": {
+            "columns": [
+              "first_name",
+              "last_name"
+            ],
+            "filter": {
+              "_or": [
+                {
+                  "spree_address": {
+                    "firstname": {
+                      "_eq": "X-Hasura-Site-Name"
+                    }
+                  }
+                },
+                {
+                  "kit_results": {
+                    "barcode": {
+                      "enterprise_consumer": {
+                        "spree_address": {
+                          "firstname": {
+                            "_eq": "X-Hasura-Site-Name"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "public",
+        "name": "tests"
+      },
+      "array_relationships": [
+        {
+          "name": "kit_results",
+          "using": {
+            "manual_configuration": {
+              "remote_table": {
+                "schema": "public",
+                "name": "kit_results"
+              },
+              "column_mapping": {
+                "id": "test_id"
+              }
+            }
+          }
+        }
+      ],
+      "select_permissions": [
+        {
+          "role": "clinical_admin",
+          "permission": {
+            "columns": [
+              "display_name"
+            ],
+            "filter": {}
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+query ResolveConsumer($id: Int!) {
+  consumers(where: { id: { _eq: $id } }) {
+    first_name
+    last_name
+  }
+}

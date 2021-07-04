@@ -1,0 +1,202 @@
+{
+  "users": {
+    "super_admin": {
+      "username": "eli+cypress_super_admin@dhamira.com",
+      "password": "Everlywell2020!",
+      "name": "Cypress super_admin",
+      "companies": [
+        "Everlywell"
+      ]
+    },
+    "super_admin2": {
+      "username": "keti+super_admin@dhamira.com"
+    },
+    "partner_admin": {
+      "username": "eli+partner_admin@dhamira.com",
+      "password": "Everlywell2020!",
+      "name": "Cypress partner_admin",
+      "companies": [
+        "Everlywell Employees"
+      ]
+    },
+    "client_admin": {
+      "username": "eli+client_admin@dhamira.com",
+      "password": "Everlywell2020!",
+      "name": "Cypress client_admin",
+      "companies": [
+        "House of Bricks"
+      ]
+    },
+    "multiple_client_admin": {
+      "username": "eli+multiple_client_admin@dhamira.com",
+      "password": "Everlywell2020!",
+      "name": "Cypress multiple_client_admin",
+      "companies": [
+        "House of Bricks",
+        "Uncle Charley's"
+      ]
+    },
+    "partner_admin_register_kits": {
+      "username": "tvrba+partner_admin_register_kits@everlywell.com",
+      "password": "Lens2021!"
+    },
+    "client_admin_register_kits": {
+      "username": "tvrba+client_admin_register_kits@everlywell.com",
+      "password": "Lens2021!"
+    },
+    "multiple_client_admin_register_kits": {
+      "username": "tvrba+multiple_client_admin_register_kits@everlywell.com",
+      "password": "Lens2021!"
+    },
+    "client_admin_access_codes": {
+      "username": "eli+client_admin_access_codes@dhamira.com",
+      "password": "Everlywell2020!",
+      "name": "Cypress client_admin_access_codes",
+      "companies": [
+        "Opt-In Orders"
+      ]
+    },
+    "multiple_client_admin_access_codes": {
+      "username": "eli+multiple_client_admin_access_codes@dhamira.com",
+      "password": "Everlywell2020!",
+      "name": "Cypress multiple_client_admin_access_codes",
+      "companies": [
+        "Opt-In Orders",
+        "Track and Trace Orders"
+      ]
+    },
+    "partner_admin_access_codes": {
+      "username": "eli+partner_admin_access_codes@dhamira.com",
+      "password": "Everlywell2020!",
+      "name": "Cypress partner_admin_access_codes",
+      "companies": [
+        "Everlywell Employees"
+      ]
+    },
+    "partner_admin_dynamic_columns": {
+      "username": "eli+partner_admin_dynamic_columns@dhamira.com",
+      "password": "Everlywell2020!",
+      "name": "Cypress partner_admin_dynamic_columns"
+    },
+    "can_view_rapid_tests": {
+      "username": "eli+cypress_partner_admin_can_view_rapid_tests@dhamira.com",
+      "password": "Everlywell2020!",
+      "name": "Cypress can_view_rapid_tests"
+    },
+    "partner_admin_hcp": {
+      "username": "eli+hcp_partner_admin@dhamira.com",
+      "password": "Everlywell2020!",
+      "name": "Cypress partner_admin_hcp"
+    },
+    "client_admin_hcp": {
+      "username": "eli+hcp_client_admin@dhamira.com",
+      "password": "Everlywell2020!",
+      "name": "Cypress client_admin_hcp"
+    },
+    "multiple_client_admin_hcp": {
+      "username": "eli+hcp_multiple_client_admin@dhamira.com",
+      "password": "Everlywell2020!",
+      "name": "Cypress multiple_client_admin_hcp"
+    },
+    "partner_admin_vitamin_d": {
+      "username": "eli+vitamin_d_user@dhamira.com",
+      "password": "Everlywell2020!",
+      "name": "Cypress vitamin_d_user"
+    },
+    "partner_admin_all_columns": {
+      "username": "eli+partner_admin_all_columns_visible@dhamira.com",
+      "password": "Everlywell2020!",
+      "name": "Cypress partner_admin_all_columns_visible",
+      "role": "enterprise partner clinical admin",
+      "partner_name": "Everlywell Employees",
+      "partner_id": 162,
+      "access_codes": "No"
+    },
+    "partner_admin_minimal_columns": {
+      "username": "eli+partner_admin_minimal_columns_visible@dhamira.com",
+      "password": "Everlywell2020!",
+      "name": "Cypress partner_admin_minimal_columns_visible",
+      "role": "enterprise partner clinical admin",
+      "partner_name": "Everlywell Employees",
+      "partner_id": 162,
+      "access_codes": "No"
+    },
+    "client_admin_all_columns": {
+      "username": "eli+client_admin_all_columns_visible@dhamira.com",
+      "password": "Everlywell2020!",
+      "name": "Cypress client_admin_all_columns–visible",
+      "role": "enterprise client clinical admin",
+      "client_name": "House Of Bricks",
+      "partner_name": "Village Gourmet",
+      "partner_id": 260,
+      "client_id": 653,
+      "access_codes": "No"
+    },
+    "client_admin_minimal_columns": {
+      "username": "eli+client_admin_minimal_columns_visible@dhamira.com",
+      "password": "Everlywell2020!",
+      "name": "Cypress client_admin_minimal_columns_visible",
+      "role": "enterprise client clinical admin",
+      "client_name": "House Of Bricks",
+      "partner_name": "Village Gourmet",
+      "partner_id": 260,
+      "client_id": 653,
+      "access_codes": "No"
+    },
+    "multiple_client_admin_all_columns": {
+      "username": "eli+multiple_client_admin_all_columns_visible@dhamira.com",
+      "password": "Everlywell2020!",
+      "name": "Cypress multiple_client_admin_all_columns_visible",
+      "role": "enterprise client clinical admin",
+      "client_names": "House Of Bricks, Uncle Charley's",
+      "partner_name": "Village Gourmet",
+      "partner_id": 260,
+      "client_ids": "653, 654",
+      "access_codes": "No"
+    },
+    "multiple_client_admin_minimal_columns": {
+      "username": "eli+multiple_client_admin_minimal_columns_visible@dhamira.com",
+      "password": "Everlywell2020!",
+      "name": "Cypress multiple_client_admin_minimal_columns_visible",
+      "role": "enterprise client clinical admin",
+      "client_names": "House Of Bricks, Uncle Charley's",
+      "partner_name": "Village Gourmet",
+      "partner_id": 260,
+      "client_ids": "653, 654",
+      "access_codes": "No"
+    }
+  },
+  "products": {
+    "covid_assurance": {
+      "product_id": 96,
+      "provider_name": "spectrum"
+    },
+    "covid_rapid": {
+      "product_id": 154,
+      "provider_name": "gbf"
+    }
+  },
+  "groups": {
+    "state_of_washington": {
+      "enterprise_partner_id": 44,
+      "name": "State of Washington",
+      "registration_type": "email"
+    },
+    "state_of_washington_cascade_school_district": {
+      "enterprise_client_id": 624,
+      "name": "State of Washington: Cascade School District",
+      "registration_type": "email"
+    },
+    "state_of_washington_sequoia_heights": {
+      "enterprise_client_id": 525,
+      "name": "State of Washington: Sequoia Heights AFH LLC",
+      "registration_type": "email"
+    },
+    "state_of_washington_kittitas_county_public_health_department": {
+      "enterprise_client_id": 635,
+      "name": "State of Washington: Kittitas County Public Health Department",
+      "registration_type": "thirdPartyId",
+      "third_party_id_label": "Student Email"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+type TestKitTableConfig @embedded {
+  client: Boolean
+  kit_id: Boolean
+  kit_status: Boolean
+  participant: Boolean
+  email: Boolean
+  third_party_member_id: Boolean
+  ordered: Boolean
+  shipped: Boolean
+  registered: Boolean
+  received_by_lab: Boolean
+  sample_issue: Boolean
+  results_released: Boolean
+  participant_viewed_at: Boolean
+  test_name: Boolean
+  result: Boolean
+  collected: Boolean
+  results_entered_at: Boolean
+  results_entered: Boolean
+  phone: Boolean
+  date_of_birth: Boolean
+}
+
+type User {
+  external_id: String! @unique
+  enterprise_client_ids: [Int]
+  enterprise_partner_id: Int
+  full_name: String
+  email: String
+  time_zone: String
+  mobile_phone_number: String
+  send_email_digest: Boolean
+  test_kit_table_config: TestKitTableConfig
+}
+
+type Query {
+  findOrCreateUserByExternalId(external_id: String!): User!
+    @resolver(name: "findOrCreateUserByExternalId")
+
+  findUsersBySendEmailDigest(send_email_digest: Boolean!): [User]!
+}

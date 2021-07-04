@@ -1,0 +1,574 @@
+{
+  "data": {
+    "kit_results": [{
+        "barcode": {
+          "serial_number": "ZLHAAV9105",
+          "barcode_state_transitions": [{
+            "created_at": "2020-07-15T20:24:02.596882",
+            "to": "registered",
+            "__typename": "barcode_state_transitions"
+          }],
+          "issues": [{
+              "issue_group": {
+                "name": "Fake Name 1"
+              }
+            },
+            {
+              "issue_group": {
+                "name": "Fake Name 2"
+              }
+            }
+          ],
+          "__typename": "barcodes"
+        },
+        "spree_user": {
+          "consumer": {
+            "first_name": "takao ",
+            "last_name": "oooo",
+            "__typename": "consumers"
+          },
+          "__typename": "spree_users"
+        },
+        "status": "ordered",
+        "results_approved_at": null,
+        "test": {
+          "display_name": "COVID-19 Test (HCP)",
+          "__typename": "tests"
+        },
+        "kit_values": null,
+        "kit_reference_ranges": null,
+        "id": 545840,
+        "created_at": "2020-07-15T20:24:02.698689",
+        "__typename": "kit_results"
+      },
+      {
+        "barcode": {
+          "serial_number": "ZJBBGX9134",
+          "barcode_state_transitions": [{
+            "created_at": "2020-07-30T16:47:21.06678",
+            "to": "registered",
+            "__typename": "barcode_state_transitions"
+          }],
+          "issues": [],
+          "__typename": "barcodes"
+        },
+        "spree_user": {
+          "consumer": {
+            "first_name": "Takao",
+            "last_name": "Test",
+            "__typename": "consumers"
+          },
+          "__typename": "spree_users"
+        },
+        "status": "results_approved",
+        "results_approved_at": null,
+        "test": {
+          "display_name": "Food Sensitivity",
+          "__typename": "tests"
+        },
+        "kit_values": null,
+        "kit_reference_ranges": null,
+        "id": 546805,
+        "created_at": "2020-07-30T16:47:21.150033",
+        "__typename": "kit_results"
+      },
+      {
+        "barcode": {
+          "serial_number": "YQBBFX9757",
+          "barcode_state_transitions": [{
+            "created_at": "2020-07-29T14:45:58.323218",
+            "to": "registered",
+            "__typename": "barcode_state_transitions"
+          }],
+          "issues": [],
+          "__typename": "barcodes"
+        },
+        "spree_user": {
+          "consumer": {
+            "first_name": "Takao",
+            "last_name": "Test",
+            "__typename": "consumers"
+          },
+          "__typename": "spree_users"
+        },
+        "status": "ordered",
+        "results_approved_at": null,
+        "test": {
+          "display_name": "Food Sensitivity",
+          "__typename": "tests"
+        },
+        "kit_values": null,
+        "kit_reference_ranges": null,
+        "id": 546722,
+        "created_at": "2020-07-29T14:45:58.42375",
+        "__typename": "kit_results"
+      },
+      {
+        "barcode": {
+          "serial_number": "YPBBCX9913",
+          "barcode_state_transitions": [{
+            "created_at": "2020-07-16T21:57:04.752414",
+            "to": "processed",
+            "__typename": "barcode_state_transitions"
+          }],
+          "issues": [{
+            "issue_group": {
+              "name": "QNS",
+              "__typename": "issue_groups"
+            },
+            "__typename": "issues"
+          }],
+          "__typename": "barcodes"
+        },
+        "spree_user": {
+          "consumer": {
+            "first_name": "takao ",
+            "last_name": "oooo",
+            "__typename": "consumers"
+          },
+          "__typename": "spree_users"
+        },
+        "status": "archived",
+        "results_approved_at": null,
+        "test": {
+          "display_name": "Food Sensitivity",
+          "__typename": "tests"
+        },
+        "kit_values": null,
+        "kit_reference_ranges": null,
+        "id": 545981,
+        "created_at": "2020-07-16T21:57:04.834947",
+        "__typename": "kit_results"
+      },
+      {
+        "barcode": {
+          "serial_number": "YLHAAV9066",
+          "barcode_state_transitions": [{
+              "created_at": "2020-07-15T20:14:02.178917",
+              "from": "active",
+              "to": "registered",
+              "__typename": "barcode_state_transitions"
+            },
+            {
+              "created_at": "2020-07-15T20:14:02.178917",
+              "from": "registered",
+              "to": "processed",
+              "__typename": "barcode_state_transitions"
+            }
+          ],
+          "issues": [],
+          "__typename": "barcodes"
+        },
+        "spree_user": {
+          "consumer": {
+            "first_name": "takao ",
+            "last_name": "oooo",
+            "__typename": "consumers"
+          },
+          "__typename": "spree_users"
+        },
+        "status": "ordered",
+        "results_approved_at": null,
+        "test": {
+          "display_name": "COVID-19 Test (HCP)",
+          "__typename": "tests"
+        },
+        "kit_values": null,
+        "kit_reference_ranges": null,
+        "id": 545833,
+        "created_at": "2020-07-15T20:14:02.26052",
+        "__typename": "kit_results"
+      },
+      {
+        "barcode": {
+          "serial_number": "YJBBGX9284",
+          "barcode_state_transitions": [{
+              "created_at": "2020-07-15T20:14:02.178917",
+              "from": "active",
+              "to": "registered",
+              "__typename": "barcode_state_transitions"
+            },
+            {
+              "created_at": "2020-07-30T16:45:17.472841",
+              "to": "processed",
+              "__typename": "barcode_state_transitions"
+            }
+          ],
+          "issues": [{
+            "issue_group": {
+              "name": "Invalid Date"
+            },
+            "resolved": true
+          }, {
+            "issue_group": {
+              "name": "Invalid Name"
+            },
+            "resolved": true
+          }],
+          "__typename": "barcodes"
+        },
+        "spree_user": {
+          "consumer": {
+            "first_name": "Takao",
+            "last_name": "Test",
+            "__typename": "consumers"
+          },
+          "__typename": "spree_users"
+        },
+        "status": "ordered",
+        "results_approved_at": null,
+        "test": {
+          "display_name": "Food Sensitivity",
+          "__typename": "tests"
+        },
+        "kit_values": null,
+        "kit_reference_ranges": null,
+        "id": 546804,
+        "created_at": "2020-07-30T16:45:17.557971",
+        "__typename": "kit_results"
+      },
+      {
+        "barcode": {
+          "serial_number": "XHHAAJ9936",
+          "barcode_state_transitions": [{
+              "created_at": "2020-07-15T00:56:49.614143",
+              "to": "registered",
+              "__typename": "barcode_state_transitions"
+            },
+            {
+              "created_at": "2020-07-15T00:50:16.673394",
+              "from": "registered",
+              "to": "processed",
+              "__typename": "barcode_state_transitions"
+            }
+          ],
+          "issues": [{
+            "issue_group": {
+              "name": "Invalid Date"
+            },
+            "resolved": false
+          }, {
+            "issue_group": {
+              "name": "Invalid Name"
+            },
+            "resolved": true
+          }],
+          "__typename": "barcodes"
+        },
+        "spree_user": {
+          "consumer": {
+            "first_name": "takao ",
+            "last_name": "oooo",
+            "__typename": "consumers"
+          },
+          "__typename": "spree_users"
+        },
+        "status": "ordered",
+        "results_approved_at": null,
+        "test": {
+          "display_name": "Microalbumin Test - Medicare Advantage",
+          "__typename": "tests"
+        },
+        "kit_values": null,
+        "kit_reference_ranges": null,
+        "id": 545734,
+        "created_at": "2020-07-15T00:56:49.696319",
+        "__typename": "kit_results"
+      },
+      {
+        "barcode": {
+          "serial_number": "WRHAAV9862",
+          "barcode_state_transitions": [{
+            "created_at": "2020-07-29T14:51:14.383409",
+            "to": "registered",
+            "__typename": "barcode_state_transitions"
+          }],
+          "issues": [],
+          "__typename": "barcodes"
+        },
+        "spree_user": {
+          "consumer": {
+            "first_name": "Takao",
+            "last_name": "Test",
+            "__typename": "consumers"
+          },
+          "__typename": "spree_users"
+        },
+        "status": "ordered",
+        "results_approved_at": null,
+        "test": {
+          "display_name": "COVID-19 Test (HCP)",
+          "__typename": "tests"
+        },
+        "kit_values": null,
+        "kit_reference_ranges": null,
+        "id": 546723,
+        "created_at": "2020-07-29T14:51:14.566849",
+        "__typename": "kit_results"
+      },
+      {
+        "barcode": {
+          "serial_number": "TSHAAV9811",
+          "barcode_state_transitions": [{
+            "created_at": "2020-07-30T16:17:34.745665",
+            "to": "registered",
+            "__typename": "barcode_state_transitions"
+          }],
+          "issues": [],
+          "__typename": "barcodes"
+        },
+        "spree_user": {
+          "consumer": {
+            "first_name": "Takao",
+            "last_name": "Test",
+            "__typename": "consumers"
+          },
+          "__typename": "spree_users"
+        },
+        "status": "ordered",
+        "results_approved_at": null,
+        "test": {
+          "display_name": "COVID-19 Test (HCP)",
+          "__typename": "tests"
+        },
+        "kit_values": null,
+        "kit_reference_ranges": null,
+        "id": 546797,
+        "created_at": "2020-07-30T16:17:34.845739",
+        "__typename": "kit_results"
+      },
+      {
+        "barcode": {
+          "serial_number": "SSHAAV9031",
+          "barcode_state_transitions": [{
+            "created_at": "2020-07-30T15:11:16.321964",
+            "to": "registered",
+            "__typename": "barcode_state_transitions"
+          }],
+          "issues": [],
+          "__typename": "barcodes"
+        },
+        "spree_user": {
+          "consumer": {
+            "first_name": "Takao",
+            "last_name": "Test",
+            "__typename": "consumers"
+          },
+          "__typename": "spree_users"
+        },
+        "status": "ordered",
+        "results_approved_at": null,
+        "test": {
+          "display_name": "COVID-19 Test (HCP)",
+          "__typename": "tests"
+        },
+        "kit_values": null,
+        "kit_reference_ranges": null,
+        "id": 546796,
+        "created_at": "2020-07-30T15:11:16.410822",
+        "__typename": "kit_results"
+      },
+      {
+        "barcode": {
+          "serial_number": "SRBBAX9302",
+          "barcode_state_transitions": [{
+            "created_at": "2020-07-14T20:12:34.934084",
+            "to": "registered",
+            "__typename": "barcode_state_transitions"
+          }],
+          "issues": [],
+          "__typename": "barcodes"
+        },
+        "spree_user": {
+          "consumer": {
+            "first_name": "takao ",
+            "last_name": "oooo",
+            "__typename": "consumers"
+          },
+          "__typename": "spree_users"
+        },
+        "status": "ordered",
+        "results_approved_at": null,
+        "test": {
+          "display_name": "Food Sensitivity",
+          "__typename": "tests"
+        },
+        "kit_values": null,
+        "kit_reference_ranges": null,
+        "id": 545710,
+        "created_at": "2020-07-14T20:12:35.061012",
+        "__typename": "kit_results"
+      },
+      {
+        "barcode": {
+          "serial_number": "RSHAAV9519",
+          "barcode_state_transitions": [{
+            "created_at": "2020-07-30T15:09:08.472291",
+            "to": "registered",
+            "__typename": "barcode_state_transitions"
+          }],
+          "issues": [],
+          "__typename": "barcodes"
+        },
+        "spree_user": {
+          "consumer": {
+            "first_name": "Takao",
+            "last_name": "Test",
+            "__typename": "consumers"
+          },
+          "__typename": "spree_users"
+        },
+        "status": "ordered",
+        "results_approved_at": null,
+        "test": {
+          "display_name": "COVID-19 Test (HCP)",
+          "__typename": "tests"
+        },
+        "kit_values": null,
+        "kit_reference_ranges": null,
+        "id": 546795,
+        "created_at": "2020-07-30T15:09:08.566377",
+        "__typename": "kit_results"
+      },
+      {
+        "barcode": {
+          "serial_number": "RRBBAX9073",
+          "barcode_state_transitions": [{
+              "created_at": "2020-07-14T19:35:40.224382",
+              "to": "registered",
+              "__typename": "barcode_state_transitions"
+            },
+            {
+              "created_at": "2020-07-14T19:27:17.56585",
+              "to": "registered",
+              "__typename": "barcode_state_transitions"
+            }
+          ],
+          "issues": [],
+          "__typename": "barcodes"
+        },
+        "spree_user": {
+          "consumer": {
+            "first_name": "takao ",
+            "last_name": "oooo",
+            "__typename": "consumers"
+          },
+          "__typename": "spree_users"
+        },
+        "status": "ordered",
+        "results_approved_at": null,
+        "test": {
+          "display_name": "Food Sensitivity",
+          "__typename": "tests"
+        },
+        "kit_values": null,
+        "kit_reference_ranges": null,
+        "id": 545709,
+        "created_at": "2020-07-14T19:35:40.315615",
+        "__typename": "kit_results"
+      },
+      {
+        "barcode": {
+          "serial_number": "RMHAAV9707",
+          "barcode_state_transitions": [{
+            "created_at": "2020-07-15T20:33:08.408631",
+            "to": "registered",
+            "__typename": "barcode_state_transitions"
+          }],
+          "issues": [],
+          "__typename": "barcodes"
+        },
+        "spree_user": {
+          "consumer": {
+            "first_name": "takao ",
+            "last_name": "oooo",
+            "__typename": "consumers"
+          },
+          "__typename": "spree_users"
+        },
+        "status": "ordered",
+        "results_approved_at": null,
+        "test": {
+          "display_name": "COVID-19 Test (HCP)",
+          "__typename": "tests"
+        },
+        "kit_values": null,
+        "kit_reference_ranges": null,
+        "id": 545842,
+        "created_at": "2020-07-15T20:33:08.498345",
+        "__typename": "kit_results"
+      },
+      {
+        "barcode": {
+          "serial_number": "QPHAAV9788",
+          "barcode_state_transitions": [{
+            "created_at": "2020-07-15T20:30:46.59276",
+            "to": "registered",
+            "__typename": "barcode_state_transitions"
+          }],
+          "issues": [],
+          "__typename": "barcodes"
+        },
+        "spree_user": {
+          "consumer": {
+            "first_name": "takao ",
+            "last_name": "oooo",
+            "__typename": "consumers"
+          },
+          "__typename": "spree_users"
+        },
+        "status": "ordered",
+        "results_approved_at": null,
+        "test": {
+          "display_name": "COVID-19 Test (HCP)",
+          "__typename": "tests"
+        },
+        "kit_values": {
+          "covid_19": 0
+        },
+        "kit_reference_ranges": null,
+        "id": 545841,
+        "created_at": "2020-07-15T20:30:46.6895",
+        "__typename": "kit_results"
+      },
+      {
+        "barcode": {
+          "serial_number": "QKBBGX9262",
+          "barcode_state_transitions": [{
+            "created_at": "2020-07-30T16:52:03.698829",
+            "to": "registered",
+            "__typename": "barcode_state_transitions"
+          }],
+          "issues": [],
+          "__typename": "barcodes"
+        },
+        "spree_user": {
+          "consumer": {
+            "first_name": "Takao",
+            "last_name": "Test",
+            "__typename": "consumers"
+          },
+          "__typename": "spree_users"
+        },
+        "status": "ordered",
+        "results_approved_at": null,
+        "test": {
+          "display_name": "Food Sensitivity",
+          "__typename": "tests"
+        },
+        "kit_values": null,
+        "kit_reference_ranges": null,
+        "id": 546806,
+        "created_at": "2020-07-30T16:52:03.796476",
+        "__typename": "kit_results"
+      }
+    ],
+    "kit_results_aggregate": {
+      "aggregate": {
+        "count": 16,
+        "__typename": "kit_results_aggregate_fields"
+      },
+      "__typename": "kit_results_aggregate"
+    }
+  }
+}
